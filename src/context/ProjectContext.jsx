@@ -7,12 +7,12 @@ export const ProjectProvider = ({children}) => {
     const [leaders, setLeaders] = useState([]);
     const [loadingLeaders, setLoadingLeaders] = useState(true); // loading update
     const [projects, setProjects] = useState([]);
-    const projectAPI = "http://localhost:5001/project";
+    const projectAPI = "https://task-backend-suak.onrender.com/project";
 
     // ✅ Fetch authenticated user
     const fetchUser = async () => {
         try {
-            const response = await fetch("http://localhost:5001/auth/me", {
+            const response = await fetch("https://task-backend-suak.onrender.com/auth/me", {
                 method: "GET",
                 credentials: "include",
                 headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },

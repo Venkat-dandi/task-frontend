@@ -21,7 +21,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        const response = await fetch("http://localhost:5001/dashboard/stats", {
+        const response = await fetch("https://task-backend-suak.onrender.com/dashboard/stats", {
           method: "GET",
           credentials: "include",
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },

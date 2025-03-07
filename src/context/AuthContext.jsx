@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 const AuthContext = createContext();
 
 export const AuthProvider = ({children}) => {
-  const authAPI = "http://localhost:5001/auth";
+  const authAPI = "https://task-backend-suak.onrender.com/auth";
 
   const [user, setUser] = useState(null);
   const [profile, setProfile] = useState(null);
@@ -23,7 +23,7 @@ export const AuthProvider = ({children}) => {
   const fetchUsers = async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch("http://localhost:5001/auth/users", {
+      const response = await fetch("https://task-backend-suak.onrender.com/auth/users", {
         method: "GET",
         credentials: "include",
         headers: { Authorization: `Bearer ${token}` },
@@ -104,7 +104,7 @@ export const AuthProvider = ({children}) => {
 
   const logout = async () => {
     try {
-      await fetch("http://localhost:5001/auth/logout", {
+      await fetch("https://task-backend-suak.onrender.com/auth/logout", {
         method: "POST",
         credentials: "include",
       });

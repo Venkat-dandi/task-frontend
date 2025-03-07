@@ -30,7 +30,7 @@ const EditProject = () => {
   useEffect(() => {
     const fetchLeaders = async () => {
       try {
-        const response = await fetch("http://localhost:5001/project/leaders", {
+        const response = await fetch("https://task-backend-suak.onrender.com/project/leaders", {
           method: "GET",
           credentials: "include",
         });

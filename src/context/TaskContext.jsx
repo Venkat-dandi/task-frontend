@@ -8,7 +8,7 @@ export const TaskProvider = ({children}) => {
     const [tasks, setTasks] = useState([]);
     const [projectName, setProjectName] = useState("");
     const [tasksByProject, setTasksByProject] = useState({});
-    const taskAPI = "http://localhost:5001/tasks";
+    const taskAPI = "https://task-backend-suak.onrender.com/tasks";
 
     //Fetch team members from backend
     const fetchMembers = async () => {

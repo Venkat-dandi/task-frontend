@@ -6,5 +6,9 @@ export default defineConfig({
   plugins: [react()],
   define: {
     global: 'window', // ✅ Fix for 'global is not defined' error
+  }, resolve: {
+    alias: {
+      events: 'events',
+    },
   },
 })
